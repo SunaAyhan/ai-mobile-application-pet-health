@@ -1,6 +1,9 @@
 import 'package:cevd_vet/tarama.dart';
+import 'package:cevd_vet/videoArama.dart';
 import 'package:flutter/material.dart';
 import 'dart:io';
+
+import 'musaitVet.dart';
 
 void main() {
   // ignore: unnecessary_new
@@ -48,7 +51,7 @@ class _AnasayfaState extends State<Anasayfa> {
             });
           },
           controller: sayfaKumandasi,
-          children: [MyApp()],
+          children: [Tarama(), MusaitVet()],
         ),
       ]),
       bottomNavigationBar: BottomNavigationBar(
