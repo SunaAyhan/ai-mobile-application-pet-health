@@ -69,7 +69,7 @@ class _State extends State<MyApp> {
   Future classifyImage() async {
     result = null;
     await Tflite.loadModel(
-        model: "assets/model_unquant.tflite", labels: "assets/labels.txt");
+        model: "assets/model.tflite", labels: "assets/labels.txt");
     var output = await Tflite.runModelOnImage(
       path: path,
       numResults: 13,
@@ -100,7 +100,7 @@ class _State extends State<MyApp> {
                   ? Text(" Choose Picture ", style: TextStyle(fontSize: 21))
                   : Image.file(
                       imageURI!,
-                      width: genislik * 0.99,
+                      width: genislik * 0.85,
                       height: 240,
                       fit: BoxFit.fill,
                     ),

@@ -7,7 +7,7 @@ void main() {
   runApp(new MaterialApp(
     debugShowCheckedModeBanner: false,
     theme: ThemeData(
-      primarySwatch: Colors.deepOrange,
+      primarySwatch: Colors.blue,
     ),
     home: Anasayfa(),
   ));
