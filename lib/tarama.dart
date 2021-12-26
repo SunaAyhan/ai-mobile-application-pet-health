@@ -98,7 +98,7 @@ class _State extends State<Tarama> {
                 ? Text(" Fotoğraf Seç ", style: TextStyle(fontSize: 21))
                 : Image.file(
                     imageURI!,
-                    height: 240,
+                    height: 180,
                     fit: BoxFit.fill,
                   ),
             SizedBox(
