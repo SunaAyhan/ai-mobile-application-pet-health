@@ -23,64 +23,70 @@ class _State extends State<MusaitVet> {
   Widget build(BuildContext context) {
     final double genislik = MediaQuery.of(context).size.width;
     final double yukseklik = MediaQuery.of(context).size.height;
-    return ListView(
-      shrinkWrap: true,
-      padding: EdgeInsets.only(top: 16),
-      physics: NeverScrollableScrollPhysics(),
-      children: [
-        GestureDetector(
-          onTap: () {
-            Navigator.push(
-              context,
-              MaterialPageRoute(builder: (context) => Mesaj()),
-            );
-          },
-          child: Container(
-            padding: EdgeInsets.only(left: 16, right: 16, top: 10, bottom: 10),
-            child: Row(
-              children: <Widget>[
-                Expanded(
-                  child: Row(
-                    children: <Widget>[
-                      SizedBox(
-                        width: 16,
-                      ),
-                      Expanded(
-                        child: Container(
-                          color: Colors.transparent,
-                          child: Column(
-                            crossAxisAlignment: CrossAxisAlignment.start,
-                            children: <Widget>[
-                              Text(
-                                "Veteriner Hekim Ömer Akgül:",
-                                style: TextStyle(fontSize: 16),
-                              ),
-                              SizedBox(
-                                height: 6,
-                              ),
-                              Text(
-                                "Tabi. Görüntülü ararsan yardımcı olabilirim.",
-                                style: TextStyle(
-                                    fontSize: 13,
-                                    color: Colors.grey.shade600,
-                                    fontWeight: FontWeight.bold),
-                              ),
-                            ],
+    return Scaffold(
+        backgroundColor: Colors.white,
+        // ignore: unnecessary_new
+
+        body: ListView(
+          shrinkWrap: true,
+          padding: EdgeInsets.only(top: 16),
+          physics: NeverScrollableScrollPhysics(),
+          children: [
+            GestureDetector(
+              onTap: () {
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(builder: (context) => Mesaj()),
+                );
+              },
+              child: Container(
+                padding:
+                    EdgeInsets.only(left: 16, right: 16, top: 10, bottom: 10),
+                child: Row(
+                  children: <Widget>[
+                    Expanded(
+                      child: Row(
+                        children: <Widget>[
+                          SizedBox(
+                            width: 16,
                           ),
-                        ),
+                          Expanded(
+                            child: Container(
+                              color: Colors.transparent,
+                              child: Column(
+                                crossAxisAlignment: CrossAxisAlignment.start,
+                                children: <Widget>[
+                                  Text(
+                                    "Veteriner Hekim Ömer Akgül:",
+                                    style: TextStyle(fontSize: 16),
+                                  ),
+                                  SizedBox(
+                                    height: 6,
+                                  ),
+                                  Text(
+                                    "Tabi. Görüntülü ararsan yardımcı olabilirim.",
+                                    style: TextStyle(
+                                        fontSize: 13,
+                                        color: Colors.grey.shade600,
+                                        fontWeight: FontWeight.bold),
+                                  ),
+                                ],
+                              ),
+                            ),
+                          ),
+                        ],
                       ),
-                    ],
-                  ),
+                    ),
+                    Text(
+                      "5 saniye önce",
+                      style:
+                          TextStyle(fontSize: 12, fontWeight: FontWeight.bold),
+                    ),
+                  ],
                 ),
-                Text(
-                  "5 saniye önce",
-                  style: TextStyle(fontSize: 12, fontWeight: FontWeight.bold),
-                ),
-              ],
+              ),
             ),
-          ),
-        ),
-      ],
-    );
+          ],
+        ));
   }
 }

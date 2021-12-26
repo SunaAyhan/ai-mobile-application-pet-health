@@ -1,7 +1,5 @@
 0 fungal
 1 mange
 2 ringworm
-3 teeth_diseases
-4 cat_acne
-5 healthy_teeth
-6 healthy_cat
+3 cat_acne
+4 healthy_cat
