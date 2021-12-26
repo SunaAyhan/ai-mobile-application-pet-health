@@ -87,7 +87,7 @@ class _State extends State<Tarama> {
     final double genislik = MediaQuery.of(context).size.width;
     final double yukseklik = MediaQuery.of(context).size.height;
     return Scaffold(
-      backgroundColor: Theme.of(context).primaryColorLight,
+      backgroundColor: Colors.white,
       body: Center(
           child: Container(
         decoration: BoxDecoration(),
@@ -106,9 +106,8 @@ class _State extends State<Tarama> {
             ),
             Container(
                 decoration: BoxDecoration(
-                  borderRadius: BorderRadius.circular(20),
-                  color: Theme.of(context).primaryColor,
-                ),
+                    borderRadius: BorderRadius.circular(20),
+                    color: Color(0xff0032a1)),
                 padding: EdgeInsets.all(10),
                 margin: EdgeInsets.fromLTRB(0, 0, 0, 0),
                 child: MaterialButton(
@@ -127,7 +126,7 @@ class _State extends State<Tarama> {
             Container(
                 decoration: BoxDecoration(
                   borderRadius: BorderRadius.circular(20),
-                  color: Theme.of(context).primaryColor,
+                  color: Color(0xff0032a1),
                 ),
                 padding: EdgeInsets.all(10),
                 margin: EdgeInsets.fromLTRB(0, 0, 0, 0),
@@ -148,7 +147,7 @@ class _State extends State<Tarama> {
                     onPressed: () => classifyImage(),
                     child: Text('Tarat'),
                     textColor: Colors.white,
-                    color: Theme.of(context).primaryColor,
+                    color: Color(0xff0032a1),
                     padding: EdgeInsets.fromLTRB(12, 12, 12, 12),
                     shape: RoundedRectangleBorder(
                       borderRadius: BorderRadius.circular(20),

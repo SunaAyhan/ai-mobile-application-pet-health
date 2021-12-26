@@ -1,3 +1,4 @@
+import 'package:cevd_vet/homepage.dart';
 import 'package:cevd_vet/tarama.dart';
 import 'package:cevd_vet/videoArama.dart';
 import 'package:flutter/material.dart';
@@ -37,10 +38,11 @@ class _AnasayfaState extends State<Anasayfa> {
     final double genislik = MediaQuery.of(context).size.width;
     final double yukseklik = MediaQuery.of(context).size.height;
     return Scaffold(
-      backgroundColor: Theme.of(context).primaryColorLight,
+      backgroundColor: Colors.white,
       // ignore: unnecessary_new
       appBar: new AppBar(
-        title: const Text('Cat Disease Detection'),
+        backgroundColor: Color(0xff0032a1),
+        title: const Text('Cevd-vet'),
       ),
       body: Stack(children: [
         Container(),
@@ -51,18 +53,19 @@ class _AnasayfaState extends State<Anasayfa> {
             });
           },
           controller: sayfaKumandasi,
-          children: [Tarama(), MusaitVet()],
+          children: [MyApp(), Tarama(), MusaitVet()],
         ),
       ]),
       bottomNavigationBar: BottomNavigationBar(
+        backgroundColor: Color(0xff0032a1),
         currentIndex: _aktifSayfaNo,
         selectedItemColor: Theme.of(context).primaryColor,
-        unselectedItemColor: Colors.grey,
+        unselectedItemColor: Colors.white,
         items: [
+          BottomNavigationBarItem(icon: Icon(Icons.home), label: "Anasayfa"),
+          BottomNavigationBarItem(icon: Icon(Icons.camera_alt), label: "Tarat"),
           BottomNavigationBarItem(
-              icon: Icon(Icons.camera_alt), label: "Cat Scanning"),
-          BottomNavigationBarItem(
-              icon: Icon(Icons.book_sharp), label: "Find Vet")
+              icon: Icon(Icons.medication), label: "Veteriner Bul")
         ],
         onTap: (secilenSayfaNo) {
           setState(() {
