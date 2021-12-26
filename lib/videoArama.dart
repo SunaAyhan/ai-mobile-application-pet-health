@@ -14,7 +14,7 @@ class _State extends State<VideoArama> {
   final AgoraClient client = AgoraClient(
     agoraConnectionData: AgoraConnectionData(
       tempToken:
-          "006f56c221d18184f919d30fe87a96d33a5IACxHHUjpAA1oCSTk4BOpUUClv1a85Rhy4//KXK1xI1HFDfn3+AAAAAAEABGkIsgEH3IYQEAAQAVfchh",
+          "006f56c221d18184f919d30fe87a96d33a5IACzwSIqnlu7k+ALeEd+oZzxKt+UYZvRJab1D+i5b1XJijfn3+AAAAAAEACVNqlcIovJYQEAAQAni8lh",
       appId: "f56c221d18184f919d30fe87a96d33a5",
       channelName: "vet",
     ),
